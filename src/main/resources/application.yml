@@ -1,8 +1,16 @@
+debug: true
+
 spring:
   application:
     name: api-gateway
 
 server:
   port: 1010
+  
+zuul:
+  routes:
+    todo:
+      path: /todo/**
+      service-id: todo-service
   
 
